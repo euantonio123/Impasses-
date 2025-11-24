@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Prático de Impasses</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #021024;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #00d9ff;
+      text-align: center;
+      font-size: 2.3em;
+    }
+
+    p {
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 30px auto;
+      font-size: 1.1em;
+    }
+
+    pre {
+      background-color: #01152f;
+      color: #00ffcc;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 850px;
+      margin: 20px auto;
+      overflow-x: auto;
+      font-size: 1em;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #00d9ff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #00d9ff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: #00d9ff;
+      color: #021024;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo Prático de Impasses</h1>
+
+  <p>
+    Para entender melhor como ocorre um impasse, imagine dois processos que precisam acessar dois recursos
+    compartilhados: um arquivo e uma impressora. Cada processo bloqueia um recurso e tenta obter o outro,
+    gerando uma situação onde nenhum deles consegue prosseguir.
+  </p>
+
+  <p>
+    Veja o exemplo em pseudocódigo abaixo:
+  </p>
+
+  <pre>
+Processo 1:                   Processo 2:
+lock(Arquivo)                 lock(Impressora)
+lock(Impressora) ← bloqueia   lock(Arquivo) ← bloqueia
+  </pre>
+
+  <p>
+    Nesse cenário, o <strong>Processo 1</strong> já bloqueou o arquivo e está esperando a impressora, enquanto o 
+    <strong>Processo 2</strong> já bloqueou a impressora e está esperando o arquivo. Nenhum dos dois libera seus
+    recursos — o sistema entra em impasse.
+  </p>
+
+  <p>
+    Para resolver ou evitar essa situação, o sistema operacional pode adotar estratégias como:
+  </p>
+
+  <ul style="max-width: 850px; margin: 20px auto; line-height: 1.8;">
+    <li><strong>Prevenção:</strong> Impedir que condições de impasse ocorram (por exemplo, exigindo que todos os recursos sejam requisitados de uma vez).</li>
+    <li><strong>Evitação:</strong> Analisar solicitações de recursos antes de concedê-las, assegurando que o sistema permaneça em um estado seguro.</li>
+    <li><strong>Detecção e recuperação:</strong> Permitir que impasses ocorram, mas detectá-los e liberar recursos de algum processo para retomar o funcionamento.</li>
+  </ul>
+
+  <a href="impar.html">Voltar</a>
+</body>
+</html>

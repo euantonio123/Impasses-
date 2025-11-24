@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* Remove margens padrão e define fonte */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* evita barra de rolagem */
+}
+
+/* Estilo do vídeo de fundo */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* fica atrás do conteúdo */
+    object-fit: cover;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.titulo {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Grupo de botões */
+.btn-group {
+    display: flex;
+    justify-content: flex-end; /* alinha para a direita */
+    align-items: center;
+    gap: 10px;
+    margin: 100px 10% 0 10%; /* dá espaço lateral e superior */
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 49%;
+    font-size: xx-large;
+    
+}
+
+/* Estilo dos botões */
+.button {
+    color: rgb(255, 255, 255) !important;
+    background: rgba(0, 0, 0, 0.5);
+    border-color: cyan;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    width: 600px;
+}
+
+.button:hover {
+    background-color: cyan;
+    color: black;
+}
+
+/* Rodapé */
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.tecnofonte {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.imagem-exemplo{
+    width: 300px; 
+   
+}

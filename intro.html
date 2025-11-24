@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução Impasses</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #021024;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h1, h2 {
+      color: #00d9ff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4em;
+    }
+
+    p {
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 25px auto;
+      font-size: 1.15em;
+    }
+
+    .imagem-exemplo, .grafico-exemplo {
+      display: block;
+      margin: 40px auto;
+      width: 40%;
+      border-radius: 10px;
+      border: 2px solid #00d9ff;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #00d9ff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #00d9ff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: #00d9ff;
+      color: #021024;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Introdução Impasses</h1>
+
+  <p>
+    Em sistemas operacionais, o <strong>impasse</strong> também chamado de <strong>deadlock</strong> ocorre quando dois ou 
+    mais processos ficam permanentemente bloqueados, esperando por recursos que nunca serão liberados. 
+    Esse fenômeno surge geralmente quando os processos competem por dispositivos, arquivos, regiões 
+    críticas de memória ou qualquer outro recurso que precise ser compartilhado.
+  </p>
+
+  <p>
+    A presença de impasses é um dos maiores desafios para o bom funcionamento de sistemas multitarefa, 
+    pois pode causar lentidão extrema, falhas inesperadas, travamentos ou até interrupção total do sistema. 
+    Por isso, compreender o que causa deadlocks é essencial para que desenvolvedores e administradores 
+    possam criar mecanismos de prevenção, detecção e recuperação.
+  </p>
+
+  <p>
+    Existem quatro condições clássicas que precisam ocorrer simultaneamente para que um impasse se forme:  
+    <strong>exclusão mútua</strong>, <strong>retenção e espera</strong>, <strong>não preempção</strong> e <strong>espera circular</strong>.  
+    Quando todas estão presentes, aumenta significativamente a probabilidade de o sistema travar 
+    parcialmente ou totalmente.
+  </p>
+
+  <p>
+    Para lidar com esse problema, surgiram diferentes abordagens, como algoritmos de prevenção (que 
+    evitam uma das condições do impasse), algoritmos de evitação (como o famoso <strong>Algoritmo do Banqueiro</strong>), 
+    técnicas de detecção de ciclos e estratégias de recuperação, que podem incluir desde matar processos 
+    até liberar recursos de forma forçada.
+  </p>
+
+  <h2>Exemplo ilustrativo de impasse</h2>
+
+  <p>
+    
+    Imagine um cruzamento estreito onde <strong>Dois carros</strong> chegam ao mesmo tempo por direções opostas.
+O primeiro carro entra um pouco no cruzamento e precisa que o outro dê ré para conseguir avançar.
+Ao mesmo tempo, o segundo carro também avança um pouco e agora precisa que o primeiro dê ré.
+Ambos ficam parados um esperando o outro liberar o caminho, mas nenhum dos dois consegue se mover.
+Nenhum avança, nenhum recua, e o trânsito trava completamente.
+  </p>
+
+  <!-- IMAGEM DE EXEMPLO -->
+  <img src="imagem/transito.jpg"
+       alt="Exemplo de impasse entre dois processos"
+       class="imagem-exemplo">
+
+  <a href="impar.html">Voltar</a>
+
+</body>
+</html>
+

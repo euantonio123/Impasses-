@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceitos de Impasses</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #021024;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #00d9ff;
+      text-align: center;
+      font-size: 2.3em;
+    }
+
+    h2 {
+      color: #00d9ff;
+      max-width: 900px;
+      margin: 40px auto 10px auto;
+      font-size: 1.5em;
+    }
+
+    p {
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 1.1em;
+    }
+
+    ul {
+      max-width: 850px;
+      margin: 20px auto;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #00d9ff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #00d9ff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: #00d9ff;
+      color: #021024;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conceitos de Impasses</h1>
+
+  <p>
+    Em sistemas operacionais, um <strong>impasse</strong> (ou <strong>deadlock</strong>) ocorre quando dois ou mais
+    processos ficam bloqueados indefinidamente, esperando por recursos que nunca serão liberados. 
+    Essa situação impede que o sistema continue executando certas tarefas, podendo causar lentidão, travamentos
+    e perda de desempenho.
+  </p>
+
+  <p>
+    O impasse é um problema típico de sistemas que utilizam <strong>execução concorrente</strong> e 
+    <strong>compartilhamento de recursos</strong>, como arquivos, impressoras, blocos de memória ou dispositivos de E/S.
+    Quando os processos não são coordenados corretamente, eles podem competir por recursos de maneira incorreta,
+    resultando em bloqueios permanentes.
+  </p>
+
+  <h2>Condições Necessárias para um Impasse</h2>
+
+  <p>
+    Para que um impasse ocorra, quatro condições devem estar presentes simultaneamente, conhecidas como 
+    <strong>Condições de Coffman</strong>:
+  </p>
+
+  <ul>
+    <li><strong>1. Exclusão mútua:</strong> Pelo menos um recurso deve estar em modo não compartilhável; ou seja, apenas um processo pode utilizá-lo de cada vez.</li>
+    <li><strong>2. Retenção e espera:</strong> Um processo mantém um ou mais recursos enquanto aguarda por outros que estão sendo usados por outro processo.</li>
+    <li><strong>3. Não-preempção:</strong> Recursos não podem ser retirados de um processo; eles só são liberados voluntariamente.</li>
+    <li><strong>4. Espera circular:</strong> Deve existir uma cadeia circular de processos, onde cada um espera por um recurso que está sendo segurado pelo próximo da cadeia.</li>
+  </ul>
+
+  <h2>Representação por Grafos de Recursos</h2>
+
+  <p>
+    Um impasse pode ser representado graficamente através de um <strong>grafo de alocação de recursos</strong>.
+    Nesse grafo, os nós representam processos e recursos, e as setas indicam as relações de solicitação e posse.
+    Quando existe um ciclo nesse grafo, pode haver um impasse. Em sistemas com múltiplas instâncias de recursos,
+    o ciclo é uma condição necessária, mas não suficiente, para o deadlock.
+  </p>
+
+  <h2>Impactos dos Impasses</h2>
+
+  <p>
+    A ocorrência de impasses pode comprometer o desempenho geral do sistema operacional e afetar diretamente
+    a experiência do usuário. Em sistemas críticos, como servidores de banco de dados, sistemas bancários
+    ou aplicações industriais, um impasse pode resultar em falhas graves e perdas financeiras.
+  </p>
+
+  <p>
+    Por isso, a <strong>prevenção, detecção e correção</strong> de impasses é uma área essencial do projeto
+    e manutenção de sistemas operacionais modernos.
+  </p>
+
+  <a href="impar.html">Voltar</a>
+</body>
+</html>
